@@ -7,7 +7,7 @@ FilmRender.prototype.render = function () {
   addTitle(this.film.title, this.container);
   addYear(this.film.release_date, this.container);
   addDirector(this.film.director, this.container);
-  // addDescription();
+  addDescription(this.film.description, this.container);
 };
 
 function addTitle(title, container) {
@@ -44,5 +44,11 @@ function addDirector(director, container) {
   divDirector.appendChild(directorText);
   divDirector.appendChild(filmDirector);
   container.appendChild(divDirector);
+}
+
+function addDescription(description, container) {
+  const descriptionText = document.createElement('p');
+  descriptionText.textContent = description;
+  container.appendChild(descriptionText);
 }
 module.exports = FilmRender;
