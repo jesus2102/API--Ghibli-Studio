@@ -3,17 +3,19 @@ const Request = require('../helpers/request_helper.js');
 
 const Film = function () {
   this.film = null;
+  this.index = null;
 }
 
 Film.prototype.bindingEvents = function () {
   this.getData();
   PubSub.subscribe('Menu:index-selected', (evt) => {
     const index = evt.detail;
-    if (index === null) {
+    if (index === 'all'){
       PubSub.publish('Film:film-ready', this.film);
     }
     else {
-      PubSub.publish('Film:film-ready', this.film[index]);
+    const filmSelected = [this.film[index]];
+    PubSub.publish('Film:film-ready', filmSelected);
     }
   })
 };
@@ -24,6 +26,7 @@ Film.prototype.getData = function () {
   .then((data) => {
     this.film = data;
     PubSub.publish('Film:all-film-ready', this.film);
+    PubSub.publish('Film:film-ready', this.film);
   })
   .catch((err) => {
     console.error(err);

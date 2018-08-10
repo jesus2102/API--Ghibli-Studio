@@ -19,6 +19,12 @@ MenuView.prototype.bindingEvents = function () {
 
 MenuView.prototype.createMenu = function (movies) {
   const list = document.createElement('ul');
+
+  const allFilms = document.createElement('li');
+  allFilms.textContent = 'All';
+  allFilms.id = 'all';
+  list.appendChild(allFilms);
+
   movies.forEach((movie, index) => {
     const name = document.createElement('li')
     name.textContent = movie.title;
