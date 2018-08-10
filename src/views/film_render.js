@@ -8,6 +8,7 @@ FilmRender.prototype.render = function () {
   addYear(this.film.release_date, this.container);
   addDirector(this.film.director, this.container);
   addDescription(this.film.description, this.container);
+  addSpaceInBetween(this.container);
 };
 
 function addTitle(title, container) {
@@ -50,5 +51,11 @@ function addDescription(description, container) {
   const descriptionText = document.createElement('p');
   descriptionText.textContent = description;
   container.appendChild(descriptionText);
+}
+
+function addSpaceInBetween(container) {
+  const line = document.createElement('hr');
+  line.className = 'spacing'
+  container.appendChild(line);
 }
 module.exports = FilmRender;

@@ -1,0 +1,103 @@
+body {
+  font-family: skia;
+  background-color: black;
+  color: #fffee1;
+}
+
+header {
+  background-image: url(../images/head.jpeg);
+  background-size: cover;
+  background-position: 24em -2em;
+  min-height: 15em;
+  margin: -23px;
+  display: -webkit-box;
+
+}
+
+h1 {
+  text-align: center;
+  padding-top: 1.5em;
+  background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+	background-size: initial;
+	color: transparent;
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
+	text-transform: uppercase;
+  padding-left: 3em;
+  font-size: 3em;
+  -webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: #fffee1;
+}
+
+h1:hover {
+  transform: scale(1.1);
+}
+
+.logo {
+  margin-top: 50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #fffee1;
+  transition: all .5s;
+  margin-left: 9em;
+}
+
+.logo:hover {
+  transform: scale(1.2) rotate(30deg);
+}
+
+.main {
+  display: flex;
+  max-width: 1200px;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.menu {
+  margin: 50px 30px;
+  padding: 20px 40px 40px;
+  min-width: 200px;
+  max-height: 380px;
+  text-align: left;
+  background: #111111;
+  border-bottom: 4px solid #ccc;
+  border-radius: 6px;
+}
+
+ul {
+  margin-left: -20px;
+}
+
+.film-container {
+  margin: 50px 30px;
+  padding: 20px 40px 40px;
+  min-width: 200px;
+  max-height: auto;
+  text-align: left;
+  background: #111111;
+  border-bottom: 4px solid #ccc;
+  border-radius: 6px;
+}
+
+.year {
+  display: flex;
+  justify-content: flex-start;
+  margin: auto;
+  padding-left: 10px;
+}
+
+.director {
+  display: flex;
+  justify-content: flex-start;
+  margin: auto;
+  padding-left: 10px;
+}
+
+h2{
+  text-decoration: underline;
+}
+
+hr {
+  margin-bottom: 100px;
+}
