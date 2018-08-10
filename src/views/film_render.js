@@ -6,7 +6,7 @@ const FilmRender = function (container, film) {
 FilmRender.prototype.render = function () {
   addTitle(this.film.title, this.container);
   addYear(this.film.release_date, this.container);
-  // addDirector();
+  addDirector(this.film.director, this.container);
   // addDescription();
 };
 
@@ -29,6 +29,20 @@ function addYear(year, container) {
   divYear.appendChild(filmYearText);
   divYear.appendChild(filmYear);
   container.appendChild(divYear);
+}
 
+function addDirector(director, container) {
+  const divDirector = document.createElement('div');
+  divDirector.className = 'director';
+
+  const directorText = document.createElement('h4');
+  directorText.textContent = "Director: ";
+
+  const filmDirector = document.createElement('h3');
+  filmDirector.textContent = director;
+
+  divDirector.appendChild(directorText);
+  divDirector.appendChild(filmDirector);
+  container.appendChild(divDirector);
 }
 module.exports = FilmRender;
