@@ -7,6 +7,15 @@ const Film = function () {
 
 Film.prototype.bindingEvents = function () {
   this.getData();
+  PubSub.subscribe('Menu:index-selected', (evt) => {
+    const index = evt.detail;
+    if (index === null) {
+      PubSub.publish('Film:film-ready', this.film);
+    }
+    else {
+      PubSub.publish('Film:film-ready', this.film[index]);
+    }
+  })
 };
 
 Film.prototype.getData = function () {

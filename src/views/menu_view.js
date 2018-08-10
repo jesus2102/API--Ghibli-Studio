@@ -13,6 +13,7 @@ MenuView.prototype.bindingEvents = function () {
 
   this.menu.addEventListener('click', (evt) => {
     const selectedFilm = evt.target.id;
+    PubSub.publish('Menu:index-selected', selectedFilm);
   })
 };
 
