@@ -14,7 +14,7 @@ Film.prototype.getData = function () {
   request.get()
   .then((data) => {
     this.film = data;
-    PubSub.pubish('Film:all-film-ready', this.film);
+    PubSub.publish('Film:all-film-ready', this.film);
   })
   .catch((err) => {
     console.error(err);
