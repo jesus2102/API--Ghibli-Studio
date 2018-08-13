@@ -11,7 +11,7 @@ header {
   min-height: 15em;
   margin: -23px;
   display: -webkit-box;
-
+  border-bottom: -webkit-linear-gradient(0deg, rgb(233, 255, 0) 0%, rgb(0, 0, 0) 80%) 10px solid;
 }
 
 h1 {
@@ -61,12 +61,21 @@ h1:hover {
   max-height: 380px;
   text-align: left;
   background: #111111;
-  border-bottom: 4px solid #ccc;
+  border-bottom: 4px solid #fffee1;
   border-radius: 6px;
+}
+
+.menu:hover{
+  border-bottom: 4px solid red;
 }
 
 ul {
   margin-left: -20px;
+}
+
+li:hover {
+  transform: scale(1.1);
+  color: red;
 }
 
 .film-container {
@@ -76,7 +85,7 @@ ul {
   max-height: auto;
   text-align: left;
   background: #111111;
-  border-bottom: 4px solid #ccc;
+  border-bottom: 4px solid #fffee1;
   border-radius: 6px;
 }
 
